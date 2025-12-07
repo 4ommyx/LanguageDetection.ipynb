@@ -1,0 +1,10 @@
+# Create docker image:
+	$ docker build -t app-language-detection . 
+
+# Run docker container:
+	$ docker run -p 80:80 app-language-detection
+
+# Push docker image to docker hub:
+	$ docker login -u <user_hub_account>
+	$ docker tag app-language-detection <user_hub_account>/app-language-detection:lastest
+	$ docker push <user_hub_account>/app-language-detection:lastest 
